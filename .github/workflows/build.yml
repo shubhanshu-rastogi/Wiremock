@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend:
+    name: Build backend & validate stubs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Build Spring Boot backend
+        working-directory: backend
+        run: mvn -B -DskipTests package
+
+      - name: Validate WireMock stub JSON
+        run: |
+          echo "Checking every mapping and __files JSON parses…"
+          fail=0
+          for f in wiremock/mappings/*.json wiremock/__files/*.json; do
+            if python3 -c "import json,sys; json.load(open('$f'))" 2>/dev/null; then
+              echo "  ok   $f"
+            else
+              echo "  FAIL $f"; fail=1
+            fi
+          done
+          exit $fail
