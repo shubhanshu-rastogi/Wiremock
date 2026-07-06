@@ -1,5 +1,8 @@
 # NimbusBank — a hands-on WireMock lab
 
+[![build](https://github.com/shubhanshu-rastogi/Wiremock/actions/workflows/build.yml/badge.svg)](https://github.com/shubhanshu-rastogi/Wiremock/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A small but realistic banking app built specifically to **learn WireMock**.
 
 You get the *same* UI running against two interchangeable backends:
