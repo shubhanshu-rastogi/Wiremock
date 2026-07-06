@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/transfer",
+    "headers": {
+      "Authorization": { "matches": "Bearer .+" }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "status": "SUCCESS",
+      "reference": "TXN-{{randomValue length=6 type='NUMERIC'}}",
+      "newBalance": 83750.75
+    }
+  }
+}

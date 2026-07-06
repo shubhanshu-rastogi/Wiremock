@@ -1,0 +1,7 @@
+{
+  "transactions": [
+    { "id": "T-8001", "date": "2026-07-01", "description": "Client Payment - Invoice #221", "amount": 40000.00, "type": "CREDIT" },
+    { "id": "T-8002", "date": "2026-07-02", "description": "Office Rent", "amount": -22000.00, "type": "DEBIT" },
+    { "id": "T-8003", "date": "2026-07-03", "description": "Software Subscription", "amount": -1500.00, "type": "DEBIT" }
+  ]
+}

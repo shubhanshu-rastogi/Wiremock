@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NimbusBank</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◈</span> NimbusBank
+    </div>
+    <div class="env-switch">
+      <label for="env">API source:</label>
+      <select id="env"></select>
+      <span id="env-dot" class="dot"></span>
+    </div>
+    <button id="logout" class="btn ghost hidden">Log out</button>
+  </header>
+
+  <!-- LOGIN VIEW -->
+  <main id="login-view" class="view">
+    <form id="login-form" class="card login-card">
+      <h1>Sign in</h1>
+      <p class="muted">Demo login: <b>adesh</b> / <b>password123</b></p>
+      <label>Username <input id="username" value="adesh" autocomplete="username" /></label>
+      <label>Password <input id="password" type="password" value="password123" autocomplete="current-password" /></label>
+      <button class="btn primary" type="submit">Log in</button>
+      <p id="login-error" class="error hidden"></p>
+    </form>
+  </main>
+
+  <!-- DASHBOARD VIEW -->
+  <main id="dashboard-view" class="view hidden">
+    <section class="card profile">
+      <h2 id="cust-name">—</h2>
+      <div class="profile-grid">
+        <span>Customer ID</span><b id="cust-id">—</b>
+        <span>Email</span><b id="cust-email">—</b>
+        <span>Phone</span><b id="cust-phone">—</b>
+        <span>Member since</span><b id="cust-since">—</b>
+      </div>
+    </section>
+
+    <section class="columns">
+      <div class="card">
+        <h3>Accounts</h3>
+        <div id="accounts" class="accounts"></div>
+      </div>
+
+      <div class="card">
+        <h3>Transactions <span id="txn-account" class="muted"></span></h3>
+        <div id="transactions" class="transactions">
+          <p class="muted">Select an account to view its statement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Transfer money</h3>
+      <form id="transfer-form" class="transfer">
+        <label>From
+          <select id="from-account"></select>
+        </label>
+        <label>To
+          <select id="to-account"></select>
+        </label>
+        <label>Amount (INR)
+          <input id="amount" type="number" min="1" step="0.01" value="500" />
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+      <p id="transfer-result" class="result hidden"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="footer-env"></span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

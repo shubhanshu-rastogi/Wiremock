@@ -1,0 +1,20 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/login",
+    "bodyPatterns": [
+      { "matchesJsonPath": "$[?(@.username == 'adesh')]" },
+      { "matchesJsonPath": "$[?(@.password == 'password123')]" }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": {
+      "token": "mock-jwt-token-abc123",
+      "customerId": "CUST-1001",
+      "name": "Adesh Sharma"
+    }
+  }
+}

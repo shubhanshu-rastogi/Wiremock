@@ -1,0 +1,4 @@
+backend/target/
+wiremock/wiremock-standalone.jar
+*.log
+.DS_Store

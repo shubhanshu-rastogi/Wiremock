@@ -1,0 +1,8 @@
+{
+  "transactions": [
+    { "id": "T-9001", "date": "2026-07-01", "description": "Salary Credit - Acme Corp", "amount": 65000.00, "type": "CREDIT" },
+    { "id": "T-9002", "date": "2026-07-02", "description": "Amazon Purchase", "amount": -2499.00, "type": "DEBIT" },
+    { "id": "T-9003", "date": "2026-07-03", "description": "Electricity Bill", "amount": -1830.25, "type": "DEBIT" },
+    { "id": "T-9004", "date": "2026-07-04", "description": "UPI - Coffee Shop", "amount": -280.00, "type": "DEBIT" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": "AC-100",
+      "type": "SAVINGS",
+      "number": "XXXX-4021",
+      "balance": 84250.75,
+      "currency": "INR"
+    },
+    {
+      "id": "AC-200",
+      "type": "CURRENT",
+      "number": "XXXX-7788",
+      "balance": 15980.00,
+      "currency": "INR"
+    }
+  ]
+}

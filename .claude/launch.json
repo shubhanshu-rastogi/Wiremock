@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bank-ui",
+      "runtimeExecutable": "./start-ui.sh",
+      "runtimeArgs": [],
+      "port": 5500
+    }
+  ]
+}

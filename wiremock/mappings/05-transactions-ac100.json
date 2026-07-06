@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/accounts/AC-100/transactions",
+    "headers": {
+      "Authorization": { "matches": "Bearer .+" }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "transactions-ac100.json"
+  }
+}
